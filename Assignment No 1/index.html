@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>My Resume</title>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+           <img class="img" src="./assets/pic.jpeg" alt="profilePic">
+           <h1>Hamna Jabbar</h1>
+           <h2>Web Developer</h2>
+           <h3>Contact Details:</h3>
+           <p>
+            <i class="fa-solid fa-location-dot"></i> <span class="location-text">Lahore, Pakistan.</span>
+           </br>
+           </br>
+            <i class="fab fa-linkedin"></i> 
+            <a href="https://www.linkedin.com/in/hamna-jabbar-b7a028246/" style="color: #5333ed;">Linkedin Profile</a>
+           </br>
+           </br>
+           <i class="fa-solid fa-envelope"></i>
+           <a href="mailto:hamnajabbar36@gmail.com" style="color: #5333ed;">Want to connect through mail?</a>
+           </br>
+           </br>
+           <i class="fa-brands fa-github"></i>
+           <a href="https://github.com/HamnaJabbar?tab=repositories" style="color: #5333ed;">Enjoy my Github repos!🙂</a>
+           </br>
+           </br>
+           <h1>Skills:</h1>
+
+<div class="skills">
+    <div class="skill">
+        <p>Javascript</p>
+        <input type="range" min="0" max="100" value="80" class="slider" id="htmlSlider">
+        <p>Proficiency: <span id="htmlValue">80%</span></p>
+    </div>
+    <div class="skill">
+        <p>ReactNative</p>
+        <input type="range" min="0" max="100" value="70" class="slider" id="cssSlider">
+        <p>Proficiency: <span id="cssValue">70%</span></p>
+    </div>
+    <div class="skill">
+        <p>React.js</p>
+        <input type="range" min="0" max="100" value="90" class="slider" id="jsSlider">
+        <p>Proficiency: <span id="jsValue">90%</span></p>
+    </div>
+</div>
+
+        </p>
+        </aside>
+        <main class="main-content">
+           <h1>Professional Summary:</h1>
+           <hr>
+        
+           <p class="para">
+            A strong background in React-native, Firebase, JavaScript, C++, C, Java, react-native mobile development,Programming fundamentals,
+             Object oriented programming. Figma and Canva for mock-ups.Strong problem-solving skills and a passion for
+            creating intuitive and visually appealing user interfaces.
+           </p>
+           <h1>Education:</h1>
+           <hr>
+
+           <p class="para">
+            <strong>COMSATS University, Lahore</strong>
+            <span style="margin-left:500px;">2021-current</span>
+           </br>
+           Bachelor's in Computer Science.
+           </p>
+
+
+           <h1>Semester Projects:</h1>
+           <hr>
+           <p class="para">
+            <i class="fa-solid fa-gift"></i>
+            <strong>Giftify:</strong>
+            Developed a gift recommendation mobile application using React Native with a Firebase backend.
+            </p>
+            <ul class="para">
+            <li>Implemented login/signup functionality for user authentication and security.</li>
+            <li>Designed a user- friendly interface for changing passwords, ensuring data privacy.</li>
+            <li>Utilized Firebase to store and manage user data, providing seamless integration and scalability.</li>
+            <li>Incorporated a questionnaire to gather user preferences such as gender, age, and interests.</li>
+            <li>Implemented a wishlist feature, allowing users to add and manage their desired gifts.</li>
+            <li>Ensured a professional and polished user experience through intuitive navigation and responsive design.</li>
+           
+        </ul>
+
+             <p class="para">
+                <i class="fa-sharp fa-solid fa-cake-candles"></i>
+                <strong>Cakes:</strong>
+            Developed a Bakery Management System with frontend using C# and Backend in Sql.
+            </p>
+             <ul class="para">
+		    <li>The system is all about dealing with database of Customers,Employees,Products,Order Details,Branches.
+	        <li>The system also deals with discount as well as Return of the products if the customer want to return purchased item and the 
+            effect will be that the quantity returned will be added to the stock of the branch and also will be deleted from the order
+             of customer and all this will be done by trigger. 
+             </li>
+            </br>
+           <strong>Information Technologies:</strong>
+           React Native, JavaScript, HTML5, CSS, Bootstrap, OOP,Java, DSA, SQL, MySQL, PF.
+            </br>
+           <strong>Designing tools:</strong>
+           Figma, Canva
+            </br>
+           <strong>Development tools:</strong>
+           VS code,Visual Studio,Firebase,GitHub
+         </ul>
+
+        <h1>Certifications:</h1>
+        <hr>
+        <ol class="para">
+         <li>
+        <strong>Udemy Certification:</strong>
+        <a href="web.pdf" target="_blank"> HTML5,CSS3,Bootstrap,JavaScript.</a>
+         </li>
+
+        <li>
+        <strong>Amazon:</strong>
+       <a href="Certificate.pdf" target="_blanck">Amazon technical career counselling webinar</a>
+        </li>
+
+        <li>
+        <strong>Coursera certification:</strong>
+        <a href="Agile.pdf">Agile Product prototype.</a>
+       </li>
+       <li>
+        <strong>IEEE-RAS certification:</strong>
+        <a href="graphics.pdf">Active society member</a>
+       </li>
+       </ol>
+
+       <h1>Socities:</h1>
+       <hr>
+       <ul class="para">
+        <li>
+        Member at google developer student club CUI student chapter.
+        </li>
+        <li>
+            Member at Graphics Dynamos at IEEE-RAS CUI student chapter.
+
+        </li>
+       </ul>
+        </main>
+    </div>
+
+
+    <script>
+        // Function to update proficiency percentage value for each skill
+        function updateSliderValue(sliderId, valueId) {
+            const slider = document.getElementById(sliderId);
+            const value = document.getElementById(valueId);
+            value.textContent = `${slider.value}%`;
+        }
+    
+        // Event listeners to update the proficiency percentages
+        document.getElementById('htmlSlider').addEventListener('input', () => {
+            updateSliderValue('htmlSlider', 'htmlValue');
+        });
+    
+        document.getElementById('cssSlider').addEventListener('input', () => {
+            updateSliderValue('cssSlider', 'cssValue');
+        });
+    
+        document.getElementById('jsSlider').addEventListener('input', () => {
+            updateSliderValue('jsSlider', 'jsValue');
+        });
+    </script>
+    
+</body>
+</html>
