@@ -1,0 +1,32 @@
+.btn-group .btn.btn-danger.dropdown-toggle {
+    margin-left: 40px
+}
+
+.my-card-deck {
+    margin-left: 20px; 
+    margin-right: 20px; 
+  }
+  
+.nav-link{
+    font-weight: bold; 
+    font-size: 18px; 
+    color:white;
+    background-color: black;
+}
+
+.custom-header {
+    background-color: black; 
+    color: white;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 20px; 
+}
+
+.navbar {
+    height: 100px; 
+  }
+
+  body {
+    background-color: black !important;
+}
