@@ -1,0 +1,25 @@
+/* This is CSS file which is served Via express */
+h1{
+    background-color: lightgray;
+}
+
+#menu li{
+    display: inline;
+}
+
+
+#menu {
+    background-color: pink;
+    padding: 30px; /* Add padding for better visibility */
+    list-style-type: none;
+}
+
+#menu li {
+    display: inline-block;
+    margin-right: 10px; /* Add margin between menu items */
+}
+
+#menu a {
+    text-decoration: none;
+    color: black; /* Change the text color if needed */
+}

@@ -1,0 +1,13 @@
+<ul id="menu">
+    <li><a href="/">Elegance</a></li>
+    <li><a href="/products">Products</a></li>
+    <li><a href="/AboutUs">AboutUs</a></li>
+    <li><a href="/books">admin</a></li>
+    <li><a href="/checkout">Proceed-to-checkout</a></li>
+    <% if (!user) { %>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/register">Register</a></li>
+    <% } else { %>
+        <li><a href="/logout">Logout</a></li>
+    <% } %>
+</ul>

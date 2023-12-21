@@ -1,0 +1,37 @@
+
+<div class="products-container">
+  <% for (let index = 0; index < products.length; index++) { %>
+    <% const product = products[index]; %>
+    <% if (product) { %>
+      <div class="product">
+        <% if (product.imageUrl) { %>
+          <img src="<%= product.imageUrl %>" alt="<%= product.name %>"/>
+        <% } %>
+        
+        <p><%= product.description %></p>
+        <p>Price: <%= product.price %></p>
+        <p>Size: <%= product.size %></p>
+        
+        <a href="/addtocart" class="btn btn-primary">Add to Cart</a>
+        
+      </div>
+    <% } %>
+  <% } %>
+</div>
+
+<div id="flash-container">
+    <% if (flash && flash.length > 0) { %>
+      <% flash.forEach(message => { %>
+        <div class="flash-message <%= message.type %>">
+          <%= message.message %>
+        </div>
+      <% }); %>
+    <% } %>
+  </div>
+  
+  
+<%- contentFor("styles") %>
+<link rel="stylesheet" href="../../public/products.css"> 
+
+
+

@@ -1,0 +1,42 @@
+<!-- views/aboutUs.ejs -->
+
+<div class="about-us-container">
+    <% if (aboutUs.backgroundImage) { %>
+        <div class="background-image" style="background-image: url('<%= aboutUs.backgroundImage %>');"></div>
+      <% } %>
+    
+  <h2><%= aboutUs.title %></h2>
+  <% if (aboutUs.subtitle) { %>
+    <h4><%= aboutUs.subtitle %></h4>
+  <% } %>
+
+  <div class="about-us-content">
+    <p><%= aboutUs.description %></p>
+
+    <% if (aboutUs.founders) { %>
+        <h3>Our Founders</h3>
+        <p><%= aboutUs.founders %></p>
+      <% } %>
+
+
+    <% if (aboutUs.history) { %>
+      <h3>Our History</h3>
+      <p><%= aboutUs.history %></p>
+    <% } %>
+
+    <h3>Our Mission</h3>
+    <p><%= aboutUs.mission %></p>
+
+    <% if (aboutUs.values && aboutUs.values.length) { %>
+      <h3>Our Values</h3>
+      <ul>
+        <% aboutUs.values.forEach(value => { %>
+          <li><%= value %></li>
+        <% }); %>
+      </ul>
+    <% } %>
+  </div>
+</div>
+
+<%- contentFor("styles") %>
+<link rel="stylesheet" href="../../public/aboutUs.css">
