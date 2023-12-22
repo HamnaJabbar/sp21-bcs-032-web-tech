@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee List</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+<h1>Employee List</h1>
+<ul id="employee-list"></ul>
+
+<script>
+  $(document).ready(function() {
+    // Fetch and display employees when the page is loaded
+    fetchEmployees();
+
+    // Function to fetch and display employees
+    function fetchEmployees() {
+      $.get("/api/employees", function(data) {
+        // Clear the existing list
+        $("#employee-list").empty();
+
+        // Append each employee to the list
+        data.forEach(function(employee) {
+          $("#employee-list").append(`<li>${employee.firstname} ${employee.lastname} - Email: ${employee.email}</li>`);
+        });
+      });
+    }
+  });
+</script>
+
+</body>
+</html>

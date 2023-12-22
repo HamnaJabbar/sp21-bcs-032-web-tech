@@ -1,0 +1,55 @@
+<form action="/submitCheckout" method="post">
+    <!-- Customer Information -->
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required>
+  
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required>
+  
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+  
+    <!-- Address Information -->
+    <label for="street">Street:</label>
+    <input type="text" id="street" name="street" required>
+  
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" required>
+  
+    <label for="state">State:</label>
+    <input type="text" id="state" name="state" required>
+  
+    <!-- Product Information -->
+    <label for="productName">Product Name:</label>
+    <input type="text" id="productName" name="productName" required>
+   
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity" min="1" required>
+  
+    <label for="price">Price:</label>
+    <input type="number" id="price" name="price" min="0" required>
+  
+    <!-- Payment Information -->
+    <label for="cardNumber">Card Number:</label>
+    <input type="text" id="cardNumber" name="cardNumber" required>
+  
+    <label for="expiryDate">Expiry Date:</label>
+    <input type="text" id="expiryDate" name="expiryDate" required>
+  
+    <div class="mb-3">
+        <button class="btn btn-info">Submit</button>
+    </div>
+  </form>
+
+  <div id="flash-container">
+    <% if (flash && flash.length > 0) { %>
+      <% flash.forEach(message => { %>
+        <div class="flash-message <%= message.type %>">
+          <%= message.message %>
+        </div>
+      <% }); %>
+    <% } %>
+  </div>
+  
+  <%- contentFor("styles") %>
+<link rel="stylesheet" href="../../public/checkout.css">
