@@ -1,0 +1,40 @@
+
+body, h1, h2, p, form {
+    margin: 0;
+    padding: 0;
+  }
+  
+ 
+  form {
+    max-width: 400px;
+    margin: 20px auto; 
+  }
+  
+  
+  label {
+    display: block; /* Make labels one per line */
+    margin-bottom: 8px; 
+  }
+  
+
+  input {
+    width: 100%; 
+    padding: 8px; 
+    margin-bottom: 12px; 
+    box-sizing: border-box; /* Include padding and border in the input's total width */
+  }
+  
+ 
+  button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+ 
+  button:hover {
+    background-color: #45a049;
+  }
+  

@@ -1,0 +1,34 @@
+/* public/aboutUs.css */
+
+.about-us-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .background-image {
+     height: 500px; 
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+  }
+  
+  .about-us-content {
+    line-height: 1.6;
+  }
+  
+  .about-us-content h3 {
+    color: purple;
+  }
+  
+  .about-us-content ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .about-us-content li {
+    margin-bottom: 8px;
+  }
+  
+  /* Add more styles as needed */
+  

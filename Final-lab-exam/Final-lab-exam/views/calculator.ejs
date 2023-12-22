@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="Landing.css">
+</head>
+<body>
+    <h1>Calculator</h1>
+    <form action="/calculate" method="post">
+        Operand1: <input type="number" name="operand1" required>
+        Operation:
+        <select name="operation">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        Operand2: <input type="number" name="operand2" required><br>
+        <input type="submit" value="Calculate" class="B">
+        
+    </form>
+    
+    <% if(results && results.length > 0) { %>
+        <h2>Results</h2>
+        <table >
+            <tr>
+                <th>Operand1</th>
+                <th>Operation</th>
+                <th>Operand2</th>
+                <th>Result</th>
+            </tr>
+            <% results.forEach(result => { %>
+                <tr>
+                    <td><%= result.operand1 %></td>
+                    <td><%= result.operation %></td>
+                    <td><%= result.operand2 %></td>
+                    <td><%= result.result %></td>
+                </tr>
+            <% }); %>
+        </table>
+    <% } %>
+</body>
+</html>

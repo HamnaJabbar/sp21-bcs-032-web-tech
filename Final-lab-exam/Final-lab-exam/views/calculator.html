@@ -1,0 +1,51 @@
+views/calculator.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+<h1>Calculator</h1>
+
+<form id="calculatorForm" action="/api/calculator/calculate" method="post">
+    <div class="mb-3">
+        <label for="operand1" class="form-label">Operand 1</label>
+        <input type="text" class="form-control" id="operand1" name="operand1" required>
+    </div>
+    <div class="mb-3">
+        <label for="operation" class="form-label">Operation</label>
+        <select class="form-select" id="operation" name="operation" required>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="/">/</option>
+            <option value="*">*</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="operand2" class="form-label">Operand 2</label>
+        <input type="text" class="form-control" id="operand2" name="operand2" required>
+    </div>
+    <button class="btn btn-info" type="submit">Calculate</button>
+</form>
+
+<script>
+  // Optionally, you can use JavaScript/jQuery for additional interactivity
+  $(document).ready(function() {
+    // Handle form submission asynchronously using AJAX if needed
+    $("#calculatorForm").submit(function(e) {
+      e.preventDefault();
+      $.post("/api/calculator/calculate", $(this).serialize(), function(data) {
+        // Handle the response if necessary
+        console.log(data);
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
